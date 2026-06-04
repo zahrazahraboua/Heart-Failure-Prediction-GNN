@@ -45,3 +45,70 @@ The architecture processes patient diagnostics through a specialized multimodal 
 ├── multi.ipynb                # Interactive Google Colab Jupyter Notebook
 ├── README.md                  # Project documentation manual
 └── requirements.txt           # Python environment packages requirements
+
+
+## How It Works: Step-by-Step Execution
+
+### 1. Model Architecture Setup
+
+The backbone GNN model is defined by stackable graph convolutions optimized via the Adam algorithm:
+
+```python
+class GlobalGCN(nn.Module):
+    def __init__(self, in_channels, hidden_channels, out_channels):
+        super().__init__()
+        self.conv1 = GCNConv(in_channels, hidden_channels)
+        self.conv2 = GCNConv(hidden_channels, hidden_channels)
+        self.classifier = nn.Linear(hidden_channels, out_channels)
+
+    def forward(self, data):
+        x, edge_index = data.x, data.edge_index
+        x = F.relu(self.conv1(x, edge_index))
+        x = F.dropout(x, p=0.5, training=self.training)
+        x = F.relu(self.conv2(x, edge_index))
+        return self.classifier(x)
+
+```
+
+### 2. Node Embeddings Concatenation
+
+```python
+# Visual dimensions (512) + Clinical dimensions (5) = 517 Features
+all_feats = np.concatenate([image_feats, clinical_feats], axis=1)
+
+```
+
+### 3. Graph Edge Connectivity
+
+```python
+knn_graph = kneighbors_graph(all_feats, n_neighbors=5, mode='connectivity', include_self=False)
+edge_index = torch.tensor(np.array(knn_graph.nonzero()), dtype=torch.long)
+
+```
+
+
+
+## Performance & Evaluation Metrics
+
+The pipeline evaluates data partitions through multi-view diagnostic tools to verify learning convergence and robustness:
+
+* **Classification Report:** Detailed monitoring of Precision, Recall, and F1-Score metrics across both classes.
+* **Confusion Matrix Heatmaps:** Visualization of true positives vs. false negatives on unseen test splits.
+* **ROC/AUC Curves:** Calculates the Area Under the Receiver Operating Characteristic curve to analyze true positive rates across flexible decision boundaries.
+* **Feature Correlation Matrices:** Evaluates linear and non-linear relationships across simulated clinical values using Seaborn heatmaps.
+
+---
+
+## 🎓 Academic Credit & Metadata
+
+* **Author:** Zahra BOUAOUNE
+* **Supervisor:** Prof. Dr. Ouarda ZEDADRA
+* **Institution:** University of 8 May 1945 - Guelma
+* **Faculty:** Faculty of Mathematics, Computer Science and Material Sciences
+* **Department:** Department of Computer Science
+* **Degree:** Master's in Computer Science
+* **Field:** Computer Science
+* **Specialization:** Science and Technology of Information and Communication
+* **Defense Date:** June 2025
+* **Official Thesis Access:** [Available on DSpace Guelma Platform](https://dspace.univ-guelma.dz/jspui/bitstream/123456789/18261/1/F5_8_BOUAOUNE_ZAHRA_1751928035.pdf)
+
