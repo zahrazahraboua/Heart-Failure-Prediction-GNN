@@ -69,8 +69,21 @@ class GlobalGCN(nn.Module):
         return self.classifier(x)
 
 ```
-
-### 2. Node Embeddings Concatenation
+### 2. Smart Feature Extraction & Caching
+```python
+def extract_and_save_image_features(df, split_name, output_dir):
+    features_path = os.path.join(output_dir, f'{split_name}_image_features.npy')
+    
+    # If cache exists, load instantly and bypass ResNet processing loop
+    if os.path.exists(features_path):
+        return np.load(features_path)
+        
+    # Otherwise, execute standard feature extraction and cache it
+    ...
+    np.save(features_path, extracted_features)
+    return extracted_features
+```
+### 3. Node Embeddings Concatenation
 
 ```python
 # Visual dimensions (512) + Clinical dimensions (5) = 517 Features
@@ -78,7 +91,7 @@ all_feats = np.concatenate([image_feats, clinical_feats], axis=1)
 
 ```
 
-### 3. Graph Edge Connectivity
+### 4. Graph Edge Connectivity
 
 ```python
 knn_graph = kneighbors_graph(all_feats, n_neighbors=5, mode='connectivity', include_self=False)
