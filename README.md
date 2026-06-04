@@ -6,7 +6,7 @@ This end-to-end framework proposes a **Multimodal Graph-based Deep Learning Pipe
 
 
 
-## 📌 Pipeline & Methodology Overview
+##  Pipeline & Methodology Overview
 
 The architecture processes patient diagnostics through a specialized multimodal and graph-driven pipeline:
 
@@ -27,7 +27,7 @@ The architecture processes patient diagnostics through a specialized multimodal 
 
 
 
-## 🛠️ Tech Stack & Key Libraries
+##  Tech Stack & Key Libraries
 
 - **Language:** Python 3
 - **Deep Learning Framework:** PyTorch & PyTorch Geometric (PyG)
