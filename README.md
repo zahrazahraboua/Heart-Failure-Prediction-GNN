@@ -45,7 +45,7 @@ The architecture processes patient diagnostics through a specialized multimodal 
 ├── multi.ipynb                # Interactive Google Colab Jupyter Notebook
 ├── README.md                  # Project documentation manual
 └── requirements.txt           # Python environment packages requirements
-
+```
 
 ## How It Works: Step-by-Step Execution
 
@@ -111,4 +111,26 @@ The pipeline evaluates data partitions through multi-view diagnostic tools to ve
 * **Specialization:** Science and Technology of Information and Communication
 * **Defense Date:** June 2025
 * **Official Thesis Access:** [Available on DSpace Guelma Platform](https://dspace.univ-guelma.dz/jspui/bitstream/123456789/18261/1/F5_8_BOUAOUNE_ZAHRA_1751928035.pdf)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
