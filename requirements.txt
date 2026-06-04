@@ -1,0 +1,9 @@
+torch
+torchvision
+torch-geometric
+tensorflow
+scikit-learn
+pandas
+numpy
+seaborn
+matplotlib
