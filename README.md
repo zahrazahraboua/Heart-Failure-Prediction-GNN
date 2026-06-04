@@ -4,7 +4,7 @@ This repository contains the official Python/PyTorch implementation of the Maste
 
 This end-to-end framework proposes a **Multimodal Graph-based Deep Learning Pipeline** that fuses visual feature embeddings from Electrocardiogram (ECG) images with clinical numerical features. Relations between patient profiles are modeled into a non-Euclidean similarity graph via the $k$-Nearest Neighbors ($k$-NN) algorithm, and classification is performed utilizing a Graph Convolutional Network (GCN).
 
----
+
 
 ## 📌 Pipeline & Methodology Overview
 
@@ -25,7 +25,7 @@ The architecture processes patient diagnostics through a specialized multimodal 
 6. **Graph Convolutional Network Classification:** Evaluates node representations using a custom `GlobalGCN` network composed of two `GCNConv` layers, localized ReLU non-linearities, Dropout regularization ($p=0.5$), and a Softmax linear classification layer.
 7. **Real-Time Single-Patient Inference:** Includes a dynamic induction pipeline that seamlessly injects an unlabelled patient into the existing graph topology, recalculates local adjacency links via $k$-NN, and predicts patient status (`Malade` vs. `Normal`).
 
----
+
 
 ## 🛠️ Tech Stack & Key Libraries
 
@@ -36,7 +36,7 @@ The architecture processes patient diagnostics through a specialized multimodal 
 - **Scientific Computing & Preprocessing:** Scikit-Learn, Pandas, NumPy
 - **Visualization:** Seaborn, Matplotlib
 
----
+
 
 ## 📂 Repository Tree Structure
 
