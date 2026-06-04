@@ -47,7 +47,7 @@ The architecture processes patient diagnostics through a specialized multimodal 
 └── requirements.txt           # Python environment packages requirements
 ```
 
-## How It Works: Step-by-Step Execution
+## How It Works: 
 
 ### 1. Model Architecture Setup
 
@@ -97,7 +97,7 @@ The pipeline evaluates data partitions through multi-view diagnostic tools to ve
 * **ROC/AUC Curves:** Calculates the Area Under the Receiver Operating Characteristic curve to analyze true positive rates across flexible decision boundaries.
 * **Feature Correlation Matrices:** Evaluates linear and non-linear relationships across simulated clinical values using Seaborn heatmaps.
 
----
+
 
 ## 🎓 Academic Credit & Metadata
 
