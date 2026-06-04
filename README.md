@@ -104,7 +104,6 @@ The pipeline evaluates data partitions through multi-view diagnostic tools to ve
 * **Author:** Zahra BOUAOUNE
 * **Supervisor:** Prof. Dr. Ouarda ZEDADRA
 * **Institution:** University of 8 May 1945 - Guelma
-* **Faculty:** Faculty of Mathematics, Computer Science and Material Sciences
 * **Department:** Department of Computer Science
 * **Degree:** Master's in Computer Science
 * **Field:** Computer Science
