@@ -42,7 +42,7 @@ The architecture processes patient diagnostics through a specialized multimodal 
 
 ```text
 ├── heart_disease_gcn.py       # Complete executable pipeline script
-├── multi.ipynb                # Interactive Google Colab Jupyter Notebook
+├── GCN.ipynb                # Interactive Google Colab Jupyter Notebook
 ├── README.md                  # Project documentation manual
 └── requirements.txt           # Python environment packages requirements
 ```
