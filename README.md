@@ -106,7 +106,6 @@ The pipeline evaluates data partitions through multi-view diagnostic tools to ve
 * **Institution:** University of 8 May 1945 - Guelma
 * **Department:** Department of Computer Science
 * **Degree:** Master's in Computer Science
-* **Field:** Computer Science
 * **Specialization:** Science and Technology of Information and Communication
 * **Defense Date:** June 2025
 * **Official Thesis Access:** [Available on DSpace Guelma Platform](https://dspace.univ-guelma.dz/jspui/bitstream/123456789/18261/1/F5_8_BOUAOUNE_ZAHRA_1751928035.pdf)
